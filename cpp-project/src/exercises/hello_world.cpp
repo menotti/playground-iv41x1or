@@ -17,9 +17,9 @@ int main (int argc, char *argv[]) {
         /* construct a stream object */
         cl::sycl::stream os(1024, 80, cgh);
 
-        cgh.single_task&lt;class hello_world&gt;([=]() {
+        cgh.single_task<class hello_world>([=]() {
            /* output "Hello World" to the console */
-           os &lt;&lt; "Hello, World!\n";
+           os << "Hello, World!\n";
         });
     });
 }
