@@ -1,4 +1,24 @@
-title: Custom Template
+title: Introduction to SYCL
 plan:
-- title: Welcome
-  statement: markdowns/welcome.md
+- title: Introduction
+  description: This chapter introduces heterogeneous computing.
+  plan:
+  - title: Introduction to SYCL
+    statement: markdowns/intro.md
+  - title: Getting Started
+    statement: markdowns/configuration.md
+  - title: Hello World
+    statement: markdowns/hello_world.md
+  - title: Quiz
+    statement: markdowns/summary.md
+- title: Sanbox
+  description: This page provides a blank project for sandboxing.
+  plan:
+  - title: Sandbox
+    statement: markdowns/sandbox.md
+projects:
+  cpp:
+    root: /cpp-project
+    runner:
+      name: aerialmantis/computecpp_ubuntu1604
+      version: latest
