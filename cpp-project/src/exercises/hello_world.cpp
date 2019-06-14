@@ -1,25 +1,36 @@
 #include <iostream>
 #include <CL/sycl.hpp>
 
-/* include the SYCL runtime header */
-class hello_world;
+int main(int, char**) {
+   cl::sycl::float4 a = { 1.0, 2.0, 3.0, 4.0 };
+   cl::sycl::float4 b = { 4.0, 3.0, 2.0, 1.0 };
+   cl::sycl::float4 c = { 0.0, 0.0, 0.0, 0.0 };
 
-int main (int argc, char *argv[]) {
-    /* construct a queue object called myQueue */
-    cl::sycl::default_selector selector;
+   cl::sycl::default_selector device_selector;
 
-    /* Queues are used to enqueue work.
-    * In this case we construct the queue using the selector. Users can create
-    * their own selectors to choose whatever kind of device they might need. */
-    cl::sycl::queue myQueue(selector);
+   cl::sycl::queue queue(device_selector);
+   std::cout << "Running on "
+             << queue.get_device().get_info<cl::sycl::info::device::name>()
+             << "\n"
+   {
+      cl::sycl::buffer<sycl::float4, 1> a_sycl(&a, cl::sycl::range<1>(1));
+      cl::sycl::buffer<sycl::float4, 1> b_sycl(&b, cl::sycl::range<1>(1));
+      cl::sycl::buffer<sycl::float4, 1> c_sycl(&c, cl::sycl::range<1>(1));
+  
+      queue.submit([&] (cl::sycl::handler& cgh) {
+         auto a_acc = a_sycl.get_access<cl::sycl::access::mode::read>(cgh);
+         auto b_acc = b_sycl.get_access<cl::sycl::access::mode::read>(cgh);
+         auto c_acc = c_sycl.get_access<cl::sycl::access::mode::discard_write>(cgh);
 
-    myQueue.submit([&](cl::sycl::handler &cgh) {
-        /* construct a stream object */
-        cl::sycl::stream os(1024, 80, cgh);
-
-        cgh.single_task<class hello_world>([=]() {
-           /* output "Hello World" to the console */
-           os << "Hello, World!\n";
-        });
-    });
+      cgh.single_task<class vector_addition>([=] () {
+      c_acc[0] = a_acc[0] + b_acc[0];
+      });
+   });
+   std::cout << "  A { " << a.x() << ", " << a.y() << ", " << a.z() << ", " << a.w() << " }\n"
+        << "+ B { " << b.x() << ", " << b.y() << ", " << b.z() << ", " << b.w() << " }\n"
+        << "------------------\n"
+        << "= C { " << c.x() << ", " << c.y() << ", " << c.z() << ", " << c.w() << " }"
+        << std::endl;
+		
+   return 0;
 }
