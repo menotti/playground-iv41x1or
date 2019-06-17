@@ -1,6 +1,6 @@
 # Hello World
 
-This first exercise will guide you through the steps involved in writing your first SYCL application. We'll work through the equivalent of "hello world" for parallel programming, a vector add. This will add two vectors together, but crucially SYCL will enable this addition to be done in parallel where possible.
+This first exercise will guide you through the steps involved in writing your first SYCL application. We'll work through the equivalent of "hello world" for parallel programming, a vector add. This will add two vectors together, but crucially SYCL will enable this addition to be done in parallel.
 
 ## Including the SYCL Header File
 
@@ -48,7 +48,7 @@ sycl::buffer<sycl::float4, 1> c_sycl(&c, sycl::range<1>(1));
 
 ### Creating a Command Group
 
-The whole thing is technically a single function call to queue::submit. submit accepts a function object parameter, which encapsulates a command group. For this purpose, the function object accepts a command group handler constructed by the SYCL runtime and handed to us as the argument. All operations using a given command group handler are part of the same command group.
+The whole thing is technically a single function call to `queue::submit`. `submit` accepts a function object parameter, which encapsulates a command group. For this purpose, the function object accepts a command group handler constructed by the SYCL runtime and handed to us as the argument. All operations using a given command group handler are part of the same command group.
 
 `myQueue.submit([&](cl::sycl::handler &cgh)`
 
@@ -82,6 +82,10 @@ In SYCL there are various ways to define a kernel function that will execute on 
 ## Cleaning Up
 
 One of the features of SYCL is that it makes use of C++ RAII (resource aquisition is initialisation), meaning that there is no explicit cleanup and everything is done via the SYCL object destructors.
+```
+{
+   ...
+}
 
 # Run it!
 

@@ -6,7 +6,7 @@ A SYCL implementation consists of two main components; a SYCL device compiler, w
 
 ## What does SYCL run on?
 
-SYCL can target a wide range of OpenCL devices on any given system such as multi-core CPUs, GPU, FPGA, DSPs and other kinds of accelerators and specialised processors. For example ComputeCpp, a SYCL 1.2.1 conformant implementation, enables SYCL code to be run on Intel, AMD, arm and Renesas processors.
+SYCL can target a wide range of OpenCL devices on any given system such as multi-core CPUs, GPU, FPGA, DSPs and other kinds of accelerators and specialised processors. For example ComputeCpp, a SYCL 1.2.1 conformant implementation, enables SYCL code to be run on Intel, AMD, ARM, Renesas, NVIDIA and in the future Imagination processors.
 
 The ComputeCpp package provides a tool called `computecpp_info`, which can be used for a variety of things, but primarily for detecting supported devices on your system that can be used by ComputeCpp.
 
