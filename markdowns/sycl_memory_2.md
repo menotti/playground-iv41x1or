@@ -18,4 +18,4 @@ if (!has_local_mem
 
 We also test the device for the local memory size - we cannot perform the reduction if there is too little of it or if local memory is unsupported altogether. Of course, in a real-world application a special case would have to be made to also support such devices.
 
-@[Parallel Reduction]({"stubs": ["src/exercises/memory_2.cpp"] "layout": "aside"})
+@[Parallel Reduction]({"stubs": ["src/exercises/memory_2.cpp"],"command": "sh /project/target/run.sh memory_2", "layout": "aside"})
