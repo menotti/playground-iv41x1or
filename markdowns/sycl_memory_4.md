@@ -84,6 +84,6 @@ Lastly, write a single number which is the result of this work-group's reduction
     global_mem[item.get_group_linear_id()] = local_mem[0];
   }
 
-And the result is obtained:
+And the result is obtained if you press the "Run" button below:
 
 @[Parallel Reduction]({"stubs": ["src/exercises/memory_4.cpp"],"command": "sh /project/target/run.sh memory_4", "layout": "aside"})

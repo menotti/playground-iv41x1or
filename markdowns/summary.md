@@ -13,11 +13,11 @@ Now that you've finished this first tutorial, test ourself on what you have lear
 -[ ] `kernel`
 
 ?[What is `cl::sycl::buffer` used for in SYCL?]
--[ ] SYCL buffers through 
--[x] Used to manage memory across the SYCL host and device(s)
--[ ] xx
+-[ ] Buffering web requests 
+-[x] To manage memory across the SYCL host and device(s)
+-[ ] Allocating memory
 
 ?[What is a SYCL accessor?]
--[x] An accessor enables us to read and write to the SYCL host and device memory
--[ ] Used to manage memory on a SYCL device
--[ ] xx
+-[x] It enables reading and writing to the SYCL host and device memory
+-[ ] It is used manage access to a kernel
+-[ ] It allows access to a device

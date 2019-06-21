@@ -6,8 +6,6 @@ SYCL (pronounced ‘sickle’) is a royalty-free, cross-platform abstraction lay
 
 SYCL is entirely standard C++ so there are not language extensions or attributes required.
 
-## This Tutorial
-
 This tutorial aims to teach you the fundamentals of SYCL through the explanation of a simple application.
 
-This tutorial will use ComputeCpp, a SYCL v1.2.1 conformant implementation.
+We will use ComputeCpp, a SYCL v1.2.1 conformant implementation to compile and execute the applications.

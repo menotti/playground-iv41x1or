@@ -24,6 +24,16 @@ plan:
     statement: markdowns/sycl_memory_3.md
   - title: Using Local Memory, Barriers And Writing The Result
     statement: markdowns/sycl_memory_4.md
+- title: Debugging SYCL Applications
+  description: This section introduces debugging SYCL applications
+  plan:
+  - title: Debugging SYCL Applications
+    statement: markdowns/sycl_debugging.md
+- title: Learn More About SYCL
+  description: Learn more about developing with SYCL
+  plan:
+  - title: More Ways to Learn About SYCL
+    statement: markdowns/sycl_learn_more.md
 projects:
   cpp:
     root: /cpp-project
