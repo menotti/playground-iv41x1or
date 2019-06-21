@@ -14,7 +14,6 @@ int main(int, char**) {
   });
 
   // <<Set up queue and check device information>>
-
   /* Here we manually set the Work Group size to 32, 
     but there may be a more optimal size for your device */
   size_t wgroup_size = 32;

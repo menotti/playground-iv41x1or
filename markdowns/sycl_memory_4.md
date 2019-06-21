@@ -86,8 +86,4 @@ Lastly, write a single number which is the result of this work-group's reduction
 
 And the result is obtained:
 
-```
-Data: 1 8 5 9 4 2 6 0 1 8 6 2 10 9 0 5 Sum: 76
-```
-
 @[Parallel Reduction]({"stubs": ["src/exercises/memory_4.cpp"],"command": "sh /project/target/run.sh memory_4", "layout": "aside"})
