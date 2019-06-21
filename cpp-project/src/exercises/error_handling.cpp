@@ -1,6 +1,8 @@
 #include <iostream>
 #include <CL/sycl.hpp>
 
+class invalid_kernel;
+
 int main(int, char**) {
    auto exception_handler = [] (cl::sycl::exception_list exceptions) {
       for (std::exception_ptr const& e : exceptions) {
@@ -13,7 +15,7 @@ int main(int, char**) {
       }
    };
 
-   cl::sycl::queue queue(sycl::default_selector{}, exception_handler);
+   cl::sycl::queue queue(cl::sycl::default_selector{}, exception_handler);
 
    queue.submit([&] (cl::sycl::handler& cgh) {
       auto range = cl::sycl::nd_range<1>(cl::sycl::range<1>(1), cl::sycl::range<1>(10));

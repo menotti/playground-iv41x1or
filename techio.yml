@@ -1,7 +1,7 @@
 title: Introduction to SYCL
 plan:
 - title: Introduction
-  description: This chapter introduces heterogeneous computing.
+  description: This section introduces heterogeneous computing.
   plan:
   - title: Introduction to SYCL
     statement: markdowns/intro.md
@@ -13,6 +13,17 @@ plan:
     statement: markdowns/summary.md
   - title: Error Handling
     statement: markdowns/error_handling.md
+- title: SYCL Memory and Synchronization
+  description: This section introduces memory and synchronization in SYCL
+  plan:
+  - title: Introduction
+    statement: markdowns/sycl_memory_1.md
+  - title: Reading Hardware Information
+    statement: markdowns/sycl_memory_2.md
+  - title: The Reduction Loop
+    statement: markdowns/sycl_memory_3.md
+  - title: Using Local Memory, Barriers And Writing The Result
+    statement: markdowns/sycl_memory_4.md
 projects:
   cpp:
     root: /cpp-project

@@ -86,6 +86,7 @@ One of the features of SYCL is that it makes use of C++ RAII (resource aquisitio
 {
    ...
 }
+```
 
 # Run it!
 
