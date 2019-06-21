@@ -29,7 +29,8 @@ int main(int, char**) {
     {
        throw "Device doesn't have enough local memory!";
     }
-  
+	
+  std::cout << "We've set up the SYCL queue" << std::endl;
   return 0;
 }
 

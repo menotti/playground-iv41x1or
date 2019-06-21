@@ -74,7 +74,7 @@
   }
 
     auto acc = buf.get_access<sycl::access::mode::read>();
-    std::cout << "Sum: " << acc[0] << std::endl;
+    std::cout << "We've set up the SYCL kernel structure" << std::endl;
 
     return 0;
   }
