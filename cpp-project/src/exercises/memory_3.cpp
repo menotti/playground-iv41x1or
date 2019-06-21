@@ -29,11 +29,12 @@
        for (auto ex : el) { std::rethrow_exception(ex); }
     } );
 
-    auto wgroup_size = device.get_info<sycl::info::device::max_work_group_size>();
-    if (wgroup_size % 2 != 0) {
-       throw "Work-group size has to be even!";
-    }
-    auto part_size = wgroup_size * 2;
+    // <<Set up queue and check device information>>
+	/* Here we manually set the Work Group size to 32, 
+    but there may be a more optimal size for your device */
+    auto wgroup_size = 32;
+    
+	auto part_size = wgroup_size * 2;
 
     auto has_local_mem = device.is_host()
         || (device.get_info<sycl::info::device::local_mem_type>()
@@ -45,6 +46,7 @@
        throw "Device doesn't have enough local memory!";
     }
   
+    // <<Reduction loop>>
     auto len = arr.size();
     while (len != 1) {
        // division rounding up

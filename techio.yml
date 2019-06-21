@@ -16,7 +16,7 @@ plan:
 - title: SYCL Memory and Synchronization
   description: This section introduces memory and synchronization in SYCL
   plan:
-  - title: Introduction
+  - title: Memory And Synchronization
     statement: markdowns/sycl_memory_1.md
   - title: Reading Hardware Information
     statement: markdowns/sycl_memory_2.md

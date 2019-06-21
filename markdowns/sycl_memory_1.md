@@ -28,7 +28,7 @@ std::cout << "Data: ";
 
 ## Parallel reduction
 
-## Overall Structure
+At the moment this code will simply display the contents of the array at position 0 since no operation has been done on the array.
 
 @[Parallel Reduction]({"stubs": ["src/exercises/memory_1.cpp"],"command": "sh /project/target/run.sh memory_1", "layout": "aside"})
 

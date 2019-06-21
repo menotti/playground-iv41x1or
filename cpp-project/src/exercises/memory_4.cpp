@@ -29,7 +29,7 @@
        for (auto ex : el) { std::rethrow_exception(ex); }
     } );
 
-
+    // <<Set up queue and check device information>>
     /* Here we manually set the Work Group size to 32, 
     but there may be a more optimal size for your device */
     size_t wgroup_size = 32;
@@ -46,6 +46,7 @@
        throw "Device doesn't have enough local memory!";
     }
   
+    // <<Reduction loop>>
     auto len = arr.size();
     while (len != 1) {
        // division rounding up

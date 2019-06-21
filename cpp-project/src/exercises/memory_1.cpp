@@ -21,7 +21,7 @@ int main(int, char**) {
 
   sycl::buffer<int32_t, 1> buf(arr.data(), sycl::range<1>(arr.size()));
 
-  // <<Read hardware information>>
+  // <<Set up queue and check device information>>
 
   // <<Reduction loop>>
 
