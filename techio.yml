@@ -38,5 +38,5 @@ projects:
   cpp:
     root: /cpp-project
     runner:
-      name: aerialmantis/computecpp_ubuntu1604
+      name: rodburns/computecpp-16.04-ubuntu:computecpp_v113
       version: latest
