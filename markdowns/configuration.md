@@ -16,7 +16,7 @@ Hit the "Run" button to see what the output looks like.
 
 @[ComputeCpp Info]({"command": "sh /project/target/validate.sh"})
 
-* Note that this tutorial is running in a cloud instance and so is using what we call the "host" only, which is an Intel CPU.
+* Note that this tutorial is running in a cloud instance and so is using an Intel CPU, no GPU or accelerator processor is available.
 
 The key line to check is this one
 
