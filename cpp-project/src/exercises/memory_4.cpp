@@ -5,6 +5,7 @@
   #include <cassert>
 
   #include <CL/sycl.hpp>
+  
   class reduction_kernel;
   namespace sycl = cl::sycl;
 

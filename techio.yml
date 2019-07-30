@@ -9,6 +9,12 @@ plan:
     statement: markdowns/configuration.md
   - title: Hello World
     statement: markdowns/hello_world.md
+  - title: Host Setup and SYCL Queue
+    statement: markdowns/vector_ops_1.md
+  - title: Device Memory using Buffers and Accessors
+    statement: markdowns/vector_ops_2.md
+  - title: SYCL Kernel Programming - The single_task API
+    statement: markdowns/vector_ops_3.md
   - title: Quiz
     statement: markdowns/summary.md
   - title: Error Handling
