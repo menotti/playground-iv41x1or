@@ -32,10 +32,10 @@ int main(int argc, char **) {
     myQueue.submit([&](sycl::handler &cgh) {
       // <<Request device memory access>>
       // read accessors
-      auto a_acc = buff_a.get_access<sycl::access::mode::read>(cgh);
-      auto b_acc = buff_b.get_access<sycl::access::mode::read>(cgh);
+      auto a_acc = buf_a.get_access<sycl::access::mode::read>(cgh);
+      auto b_acc = buf_b.get_access<sycl::access::mode::read>(cgh);
       // write accessor
-      auto c_acc = buff_c.get_access<sycl::access::mode::write>(cgh);
+      auto c_acc = buf_c.get_access<sycl::access::mode::write>(cgh);
 
       // Enqueue the kernel for execution using the `single_task` API
       cgh.single_task<class vector_addition>([=]() {
@@ -53,8 +53,7 @@ int main(int argc, char **) {
     // The cl::sycl::vec class works for host as well so the same functionality
     // is available on the host application.
     std::cout << "result (c=a+b): " << c.x() << " " << c.y() << " " << c.z()
-              << " ";
-    std::cout << c.w() << std::endl;
+              << " " << c.w() << std::endl;
   }
   return 0;
 }

@@ -5,6 +5,9 @@
 
 namespace sycl = cl::sycl;
 
+/* This forward declaration will be explained in the next section */
+class vector_addition;
+
 int main(int argc, char **) {
   // <<Setup host memory>>
   // define input vectors
