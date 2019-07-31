@@ -5,6 +5,7 @@
 #include <cassert>
 
 #include <CL/sycl.hpp>
+
 namespace sycl = cl::sycl;
 
 int main(int, char**) {
