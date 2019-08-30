@@ -45,7 +45,7 @@ Location in the source code:
 <p>
 
 ```cpp
-sycl::float4 buf_a = { 1.0f, 1.0f, 1.0f, 1.0f }; // input 1
+sycl::float4 a = { 1.0f, 1.0f, 1.0f, 1.0f }; // input 1
 ```
 
 </p>
