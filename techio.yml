@@ -3,7 +3,7 @@ plan:
 - title: Introduction
   description: This section introduces heterogeneous computing.
   plan:
-  - title: Introduction to SYCL
+  - title: Introdução ao SYCL
     statement: markdowns/intro.md
   - title: Getting Started
     statement: markdowns/configuration.md
