@@ -2,10 +2,10 @@
 
 ## O que é SYCL?
 
-SYCL (pronuncia-se 'saicou') is a royalty-free, cross-platform abstraction layer that builds on the underlying concepts, portability and efficiency of OpenCL that enables code for heterogeneous processors to be written in a “single-source” style using completely standard C++. SYCL enables single source development where C++ template functions can contain both host and device code to construct complex algorithms that use OpenCL acceleration, and then re-use them throughout their source code on different types of data.
+O SYCL (pronuncia-se 'saicou') é uma camada de abstração multiplataforma, isenta de royalties, que se baseia nos conceitos subjacentes, portabilidade e eficiência do OpenCL, permitindo que o código para processadores heterogêneos seja gravado no estilo “single-source” (código fonte único) usando somente C++ padrão. O SYCL permite o desenvolvimento com um único código fonte, em que as funções de _templates_ C++ podem conter código de _host_ e dispositivo para construir algoritmos complexos que usam a aceleração OpenCL e, em seguida, reutilizá-los em todo o código-fonte em diferentes tipos de dados.
 
-SYCL is entirely standard C++ so there are no language extensions or attributes required.
+O SYCL é totalmente C++ padrão, portanto, não há extensões ou atributos de idioma necessários.
 
-This tutorial aims to teach you the fundamentals of SYCL through the explanation of a simple application.
+Este tutorial tem como objetivo ensinar os fundamentos do SYCL por meio da explicação de uma aplicação simples.
 
-We will use ComputeCpp, a SYCL v1.2.1 conformant implementation to compile and execute the applications.
+Usaremos o ComputeCpp, uma implementação compatível com SYCL v1.2.1 para compilar e executar os exemplos.
