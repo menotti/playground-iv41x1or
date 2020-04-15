@@ -1,16 +1,18 @@
 # Quiz
 
-Now that you've finished this first tutorial, test ourself on what you have learnt so far.
+Agora que você terminou este primeiro tutorial, teste seus conhecimentos para saber o que aprendeu até agora.
 
-?[Which header includes the SYCL runtime?]
--[ ] `SYCL\cl.h`
+?[Qual cabeçalho inlui o _runtime_ SYCL?]
 -[ ] `CL\sycl.h`
+-[ ] `SYCL\cl.h`
 -[x] `CL\sycl.hpp`
+-[ ] `SYCL\cl.hpp`
 
 ?[Which object is used to submit tasks in SYCL?]
--[x] `queue`
 -[ ] `command group`
+-[ ] `device`
 -[ ] `kernel`
+-[x] `queue`
 
 ?[What is `cl::sycl::buffer` used for in SYCL?]
 -[ ] Buffering web requests 
