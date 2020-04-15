@@ -4,8 +4,8 @@
 class vector_addition;
 
 int main(int, char**) {
-   cl::sycl::float4 a = { 1.0, 2.0, 3.0, 4.0 };
-   cl::sycl::float4 b = { 4.0, 3.0, 2.0, 1.0 };
+   cl::sycl::float4 a = { 1.1, 2.2, 3.3, 4.4 };
+   cl::sycl::float4 b = { 4.4, 3.3, 2.2, 1.1 };
    cl::sycl::float4 c = { 0.0, 0.0, 0.0, 0.0 };
 
    cl::sycl::default_selector device_selector;
