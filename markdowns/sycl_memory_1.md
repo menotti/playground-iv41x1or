@@ -8,13 +8,13 @@ OpenCL e SYCL definem uma distinção clara entre várias regiões na memória e
 
 No lado do dispositivo, existem mais regiões de memória:
 
- * A memória global está disponível da mesma forma para todos os grupos de trabalho e itens. Pode ser considerado um equivalente de RAM do lado do dispositivo. O destino correspondente, `access::target::global_buffer`, é o destino padrão para `buffer::get_access`. Nos exemplos anteriores, não especificamos explicitamente um destino, portanto este foi usado.
+* A memória global está disponível da mesma forma para todos os grupos de trabalho e itens. Pode ser considerado um equivalente de RAM do lado do dispositivo. O destino correspondente, `access::target::global_buffer`, é o destino padrão para `buffer::get_access`. Nos exemplos anteriores, não especificamos explicitamente um destino, portanto este foi usado.
 
- * A memória local é específica para um único grupo de trabalho. Grupos de trabalho não podem acessar a memória local de outras pessoas, mas ela é compartilhada entre todos os itens de trabalho de um grupo. Pode ser pensado como um cache controlado pelo usuário. É especialmente útil para problemas de dividir e conquistar, onde cada parte da computação é tratada por um grupo de trabalho. A memória local pode ser usada para armazenar o resultado de tal cálculo. A memória local é alocada por execução do kernel e não pode ser preenchida com dados do host, portanto, você deve inicializá-la. A maneira canônica de alocá-lo é criar um acessador `access::target::local` dentro de um grupo de comandos, passando o tamanho de alocação solicitado.
+* A memória local é específica para um único grupo de trabalho. Grupos de trabalho não podem acessar a memória local de outras pessoas, mas ela é compartilhada entre todos os itens de trabalho de um grupo. Pode ser pensado como um cache controlado pelo usuário. É especialmente útil para problemas de dividir e conquistar, onde cada parte da computação é tratada por um grupo de trabalho. A memória local pode ser usada para armazenar o resultado de tal cálculo. A memória local é alocada por execução do kernel e não pode ser preenchida com dados do host, portanto, você deve inicializá-la. A maneira canônica de alocá-lo é criar um acessador `access::target::local` dentro de um grupo de comandos, passando o tamanho de alocação solicitado.
 
- * Memória privada é uma pequena região dedicada a cada item de trabalho. É muito parecido com a memória de registro da CPU. Todas as variáveis criadas em um kernel são armazenadas na memória privada. Além disso, objetos private_memory dedicados podem ser criados para essa finalidade.
+* Memória privada é uma pequena região dedicada a cada item de trabalho. É muito parecido com a memória de registro da CPU. Todas as variáveis criadas em um kernel são armazenadas na memória privada. Além disso, objetos private_memory dedicados podem ser criados para essa finalidade.
 
- * Finalmente, a memória constante é uma parte somente leitura da memória global, que também pode fazer referência a um buffer do lado do host.
+* Finalmente, a memória constante é uma parte somente leitura da memória global, que também pode fazer referência a um buffer do lado do host.
 
 Neste exemplo, tentaremos calcular uma redução de matriz - a soma de todos os seus elementos. A estrutura geral do exemplo é mostrada no console. Você pode ver o código que inicializa uma matriz de valores aleatórios a serem adicionados e imprime esses valores.
 
