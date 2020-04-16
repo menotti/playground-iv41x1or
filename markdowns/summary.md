@@ -1,25 +1,26 @@
-# Quiz
+# Questionário
 
 Agora que você terminou este primeiro tutorial, teste seus conhecimentos para saber o que aprendeu até agora.
 
-?[Qual cabeçalho inlui o _runtime_ SYCL?]
+?[Qual cabeçalho inlui o runtime SYCL?]
 -[ ] `CL\sycl.h`
 -[ ] `SYCL\cl.h`
 -[x] `CL\sycl.hpp`
 -[ ] `SYCL\cl.hpp`
 
-?[Which object is used to submit tasks in SYCL?]
--[ ] `command group`
--[ ] `device`
--[ ] `kernel`
+?[Qual objeto é usado para enviar tarefas no SYCL?]
 -[x] `queue`
+-[ ] `kernel`
+-[ ] `device`
+-[ ] `command group`
 
-?[What is `cl::sycl::buffer` used for in SYCL?]
--[ ] Buffering web requests 
--[x] To manage memory across the SYCL host and device(s)
--[ ] Allocating memory
+?[Para que é utilizado o `cl::sycl::buffer` no SYCL??]
+-[x] Para gerenciar a memória no host e dispositivos SYCL
+-[ ] Buffer de solicitações da web 
+-[ ] Para alocar memória
 
-?[What is a SYCL accessor?]
--[x] It enables reading and writing to the SYCL host and device memory
--[ ] It is used manage access to a kernel
--[ ] It allows access to a device
+?[O que é um acessador SYCL?]
+-[ ] Permite acesso a um dispositivo
+-[ ] É usado para gerenciar o acesso a um kernel
+-[ ] Gerencia o controle de acesso ao dispositivo
+-[x] Permite ler e gravar na memória do host e do dispositivo SYCL
