@@ -16,7 +16,7 @@ Você pode encontrar mais vídeos de apresentações relacionadas ao SYCL em [sy
 ## Frameworks SYCL
 
 Há um número crescente de Frameworks que são acelerados usando SYCL. Alguns deles estão listados no [site do desenvolvedor do Codeplay](https://developer.codeplay.com) e incluem:
- * [SYCL-DNN](https://github.com/codeplaysoftware/SYCL-DNN) Um projeto que oferece operações para convoluções que podem ser usadas para criar aplicativos de aprendizado de máquina
- * [SYCL-BLAS](https://github.com/codeplaysoftware/sycl-blas) Um projeto que oferece operações BLAS
- * [Eigen](https://github.com/codeplaysoftware/sycl-blas) Uma biblioteca de álgebra linear C++ usando SYCL para operações de tensores
- * [SYCL Parallel STL](https://github.com/KhronosGroup/SyclParallelSTL) Um projeto que implementa o ParallelSTL usando SYCL
+* [SYCL-DNN](https://github.com/codeplaysoftware/SYCL-DNN) Um projeto que oferece operações para convoluções que podem ser usadas para criar aplicativos de aprendizado de máquina
+* [SYCL-BLAS](https://github.com/codeplaysoftware/sycl-blas) Um projeto que oferece operações BLAS
+* [Eigen](https://github.com/codeplaysoftware/sycl-blas) Uma biblioteca de álgebra linear C++ usando SYCL para operações de tensores
+* [SYCL Parallel STL](https://github.com/KhronosGroup/SyclParallelSTL) Um projeto que implementa o ParallelSTL usando SYCL
