@@ -1,12 +1,12 @@
-# SYCL Kernel Programming - The single_task API
+# Programação de Kernel SYCL - A API single_task
 
-## Declare the `vector addition` kernel
+## Declare o kernel `vector addition` 
 
-### Description
+### Descrição
 
-By specification, an unnamed type is an invalid template argument for classes used to name SYCL kernels. Therefore, you need to at least declare the kernel class before using it.
+Por especificação, um tipo sem nome é um argumento de modelo inválido para classes usadas para nomear kernels SYCL. Portanto, você precisa pelo menos declarar a classe do kernel antes de usá-la.
 
-The following examples are valid SYCL kernel names:
+Os exemplos a seguir são nomes de kernel SYCL válidos:
 
 ```cpp
 // class
@@ -17,17 +17,17 @@ struct MyKernelStruct;
 enum class MyKernelEnum : int;
 ```
 
-### Task
+### Tarefa
 
-Forward declare the `vector_addition` class functor before the `int main` entry point of the application.
+Adiante declare o functor da classe `vector_addition` antes do ponto de entrada `int main` da aplicação.
 
-Location in the source code:
+Localização no código fonte:
 
 ```cpp
 // <<Declare vector_addition kernel function object>>
 ```
 
-<details><summary>Hint</summary>
+<details><summary>Dica</summary>
 <p>
 
 ```cpp
@@ -37,36 +37,36 @@ class vector_addition;
 </p>
 </details>
 
-## Implement the `vector addition` kernel
+## Implemente o kernel `vector_addition` 
 
-### Description
+### Descrição
 
-Now we need to enqueue and the vector addition kernel for execution.
+Agora precisamos enfileirar o kernel de adição de vetores para execução.
 
-A kernel that is executed on one thread using `NDRange(1,1,1)` can be enqueued using the `cl::sycl::single_task` API:
+Um kernel que é executado em um _thread_ usando `NDRange (1,1,1)` pode ser enfileirado usando a API `cl::sycl::single_task`:
 
 ```cpp
 single_task<typename kernel_lambda_name>([=](){});
 ```
 
-This is equivalent to executing a kernel on a single compute unit with a single work-group of only one work-item. Thus, we can access the values of the accessor objects directly by using the `0th` index as follows:
+Isso é equivalente à execução de um kernel em uma única unidade de computação com um único grupo de trabalho de apenas um item de trabalho. Assim, podemos acessar os valores dos objetos acessadores diretamente usando o índice `0` da seguinte maneira:
 
 ```cpp
 // e.g, assign accessor element in the kernel body
 acc[0] = someValue;
 ```
 
-### Task
+### Tarefa
 
-Complete the vector addition kernel code where the accessors of `a`, `b`, `c` make the vectors available for calculating `c = a + b`.
+Complete o código do kernel de adição de vetores em que os acessadores de `a`, `b`, `c` disponibilizam os vetores para o cálculo de `c = a + b`.
 
-Location in the source code:
+Localização no código fonte:
 
 ```cpp
 // <<Complete the vector addition computation>>
 ```
 
-<details><summary>Hint</summary>
+<details><summary>Dica</summary>
 <p>
 
 ```cpp
@@ -76,6 +76,6 @@ c_acc[0] = a_acc[0] + b_acc[0];
 </p>
 </details>
 
-# Run it!
+# Vamos executar!
 
-@[Hello World from SYCL]({"stubs": ["src/exercises/vector-ops_3.cpp"],"command": "sh /project/target/run.sh vector-ops_3", "layout": "aside"})
+@[Olá mundo em SYCL]({"stubs": ["src/exercises/vector-ops_3.cpp"],"command": "sh /project/target/run.sh vector-ops_3", "layout": "aside"})
