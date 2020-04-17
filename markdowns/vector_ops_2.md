@@ -1,12 +1,12 @@
-#  Memória do dispositivo usando buffers e acessadores
+#  Memória do dispositivo usando _buffers_ e acessadores
 
-## Configurando a memória do dispositivo - **Buffers**
+## Configurando a memória do dispositivo - **_Buffers_**
 
 ### Descrição
 
-Para manipular dados na memória do dispositivo, precisamos criar buffers SYCL.
+Para manipular dados na memória do dispositivo, precisamos criar _buffers_ SYCL.
 
-O construtor para buffers para um ponteiro de dados brutos para os dados a serem gerenciados é o seguinte:
+O construtor de _buffers_ para um ponteiro de dados brutos a serem gerenciados é o seguinte:
 
 ```cpp
 cl::sycl::buffer<typename T, int dimensions>(
@@ -17,7 +17,7 @@ cl::sycl::buffer<typename T, int dimensions>(
 
 ### Tarefas
 
-Crie buffers para os 2 vetores de entrada e também para o de saída.
+Crie _buffers_ para os 2 vetores de entrada e também para o de saída.
 
 Localização no código fonte:
 
@@ -36,11 +36,11 @@ sycl::buffer<sycl::float4, 1> buf_a(&a, cl::sycl::range<1>{1});
 </p>
 </details>
 
-## Acessando a memória do dispositivo - **Accessors**
+## Acessando a memória do dispositivo - **_Accessors_**
 
 ### Descrição
 
-O SYCL tem o conceito de acessadores que são usados para acessar o controle de solicitação sobre a memória do dispositivo a partir dos objetos buffer.
+O SYCL tem o conceito de acessadores que são usados para acessar o controle de solicitação sobre a memória do dispositivo a partir dos objetos _buffer_.
 
 Os diferentes modos de acesso são encapsulados na seguinte classe enum:
 
@@ -49,16 +49,16 @@ enum class mode {
   read,
   write, 
   read_write, 
-  discard_wirte, 
+  discard_write, 
   discard_read_write,
   atomic
 };
 ``` 
-que mora no namespace `access`.
+localizada no namespace `access`.
 
 Nesta fase, focaremos apenas os mais comuns: `read`, `write` e `read_write`.
 
-Um acessador SYCL pode ser criado a partir de um buffer usando a seguinte construção:
+Um acessador SYCL pode ser criado a partir de um _buffer_ usando a seguinte construção:
 
 ```cpp
 // e.g., read access to buffer memory
@@ -69,9 +69,9 @@ onde `cgh` é uma instância do objeto manipulador do grupo de comandos SYCL `cl
 
 ### Tarefas
 
-Solicite acesso dos buffers para acessar os dados no dispositivo.
-- Acesso de leitura dos buffers de entrada
-- Acesso de gravação do buffer de saída
+Solicite acesso dos _buffers_ para acessar os dados no dispositivo.
+- Acesso de leitura dos _buffers_ de entrada
+- Acesso de gravação do _buffer_ de saída
 
 Localização no código fonte:
 
