@@ -1,12 +1,12 @@
-# Programação de Kernel SYCL - A API single_task
+# Programação de _Kernel_ SYCL - A API single_task
 
-## Declare o kernel `vector addition` 
+## Declare o _kernel_ `vector_addition` 
 
 ### Descrição
 
-Por especificação, um tipo sem nome é um argumento de modelo inválido para classes usadas para nomear kernels SYCL. Portanto, você precisa pelo menos declarar a classe do kernel antes de usá-la.
+Por especificação, um tipo sem nome é um argumento de modelo inválido para classes usadas para nomear _kernels_ SYCL. Portanto, você precisa pelo menos declarar a classe do _kernel_ antes de usá-la.
 
-Os exemplos a seguir são nomes de kernel SYCL válidos:
+Os exemplos a seguir são nomes de _kernel_ SYCL válidos:
 
 ```cpp
 // class
@@ -19,7 +19,7 @@ enum class MyKernelEnum : int;
 
 ### Tarefa
 
-Adiante declare o functor da classe `vector_addition` antes do ponto de entrada `int main` da aplicação.
+Mais adiante, declare o functor da classe `vector_addition` antes do ponto de entrada `int main` da aplicação.
 
 Localização no código fonte:
 
@@ -37,19 +37,19 @@ class vector_addition;
 </p>
 </details>
 
-## Implemente o kernel `vector_addition` 
+## Implemente o _kernel_ `vector_addition` 
 
 ### Descrição
 
-Agora precisamos enfileirar o kernel de adição de vetores para execução.
+Agora precisamos enfileirar o _kernel_ de adição de vetores para execução.
 
-Um kernel que é executado em um _thread_ usando `NDRange (1,1,1)` pode ser enfileirado usando a API `cl::sycl::single_task`:
+Um _kernel_ que é executado em uma _thread_ usando `NDRange(1,1,1)` pode ser enfileirado usando a API `cl::sycl::single_task`:
 
 ```cpp
 single_task<typename kernel_lambda_name>([=](){});
 ```
 
-Isso é equivalente à execução de um kernel em uma única unidade de computação com um único grupo de trabalho de apenas um item de trabalho. Assim, podemos acessar os valores dos objetos acessadores diretamente usando o índice `0` da seguinte maneira:
+Isso é equivalente à execução de um _kernel_ em uma única unidade de computação com um único grupo de trabalho de apenas um item de trabalho. Assim, podemos acessar os valores dos objetos acessadores diretamente usando o índice `0` da seguinte maneira:
 
 ```cpp
 // e.g, assign accessor element in the kernel body
@@ -58,7 +58,7 @@ acc[0] = someValue;
 
 ### Tarefa
 
-Complete o código do kernel de adição de vetores em que os acessadores de `a`, `b`, `c` disponibilizam os vetores para o cálculo de `c = a + b`.
+Complete o código do _kernel_ de adição de vetores em que os acessadores de `a`, `b`, `c` disponibilizam os vetores para o cálculo de `c = a + b`.
 
 Localização no código fonte:
 
