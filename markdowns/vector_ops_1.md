@@ -1,21 +1,21 @@
-# Configuração do host e fila (Queue) SYCL
+# Configuração do _host_ e fila (_Queue_) SYCL
 
-Este exercício é uma versão ligeiramente modificada da adição de vetor que fizemos no exemplo anterior. Você assumirá o controle deste e concluirá o código para essa aplicação sozinho. São fornecidas instruções em cada etapa da conclusão, portanto, você deve ser capaz de fazê-lo. Vamos começar.
+Este exercício é uma versão ligeiramente modificada da adição de vetores que fizemos no exemplo anterior. Você assumirá o controle desta vez e concluirá o código para essa aplicação. São fornecidas instruções em cada etapa da conclusão, portanto, você deve ser capaz de fazê-lo. Vamos começar!
 
 > Até agora, você deve saber que precisa incluir o arquivo de cabeçalho SYCL para usar o SYCL em sua aplicação. Ele já está incluído na parte superior do arquivo de origem - `#include <CL/sycl.hpp>`.
 
-## Configuração do host
+## Configuração do _host_
 
 ### Descrição
 
-O primeiro passo é inicializar os dados vetoriais no host.
+O primeiro passo é inicializar os dados vetoriais no _host_.
 
-Nós estaremos usando:
+Nós usaremos:
 
 ```cpp
 cl::sycl::float4
 ```
-que é um alias de tipo para
+que é um _alias_ de tipo para
 
 ```cpp
 cl::sycl::vec<float, 4>
@@ -50,11 +50,11 @@ sycl::float4 a = { 1.0f, 1.0f, 1.0f, 1.0f }; // entrada 1
 </p>
 </details>
 
-## Inicializar fila SYCL
+## Inicializar uma fila SYCL
 
 ### Descrição
 
-A fila SYCL é construída a partir da seleção de um dispositivo suportado.
+Uma fila SYCL é construída a partir da seleção de um dispositivo suportado.
 
 O sistema está configurado para sempre forçar a execução dos exemplos SYCL no dispositivo da CPU. Assim, o seletor padrão selecionará a CPU devido às suas heurísticas para identificar as plataformas e dispositivos suportados em nosso sistema.
 
