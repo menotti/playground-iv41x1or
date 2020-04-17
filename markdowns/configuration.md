@@ -2,7 +2,7 @@
 
 ## Como o SYCL funciona?
 
-Uma implementação SYCL consiste em dois componentes principais; um compilador de dispositivo SYCL, que compila seu código para dispositivos OpenCL, e uma biblioteca de tempo de execução SYCL que fornece a interface de alto nível para escrever aplicativos SYCL e o tempo de execução para executar o código do dispositivo em dispositivos OpenCL.
+Uma implementação SYCL consiste em dois componentes principais: (i) um compilador de dispositivo SYCL, que compila seu código para dispositivos OpenCL, e (ii) uma biblioteca de tempo de execução SYCL que fornece a interface de alto nível para escrever aplicativos SYCL e o _runtime_ para executar o código do dispositivo em dispositivos OpenCL.
 
 ## Em que o SYCL é executado?
 
@@ -12,7 +12,7 @@ O pacote ComputeCpp fornece uma ferramenta chamada `computecpp_info`, que pode s
 
 Para fins de demonstração, podemos executar o `computecpp_info` aqui para exibir os dispositivos OpenCL disponíveis para este tutorial.
 
-Clique no botão "Executar" para ver como é a saída.
+Clique no botão `Run` para ver como é sua saída:
 
 @[ComputeCpp Info]({"command": "sh /project/target/validate.sh"})
 
@@ -26,4 +26,4 @@ A linha principal para observar é esta
  
 `O dispositivo é suportado               : SIM - Testado internamente pela Codeplay Software Ltd.`
 
-Como você pode ver na saída de computecpp_info, o único dispositivo suportado é o "host", que é a CPU Intel. Embora seja improvável oferecer melhorias de desempenho na ausência de uma GPU, ele permite executar nosso código SYCL usando o ComputeCpp.
+Como você pode ver na saída de comando `computecpp_info`, o único dispositivo suportado é o "host", que é a CPU Intel. Embora seja improvável oferecer melhorias de desempenho na ausência de uma GPU, ele permite executar nosso código SYCL usando o ComputeCpp.
