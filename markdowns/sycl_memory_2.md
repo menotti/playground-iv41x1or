@@ -1,8 +1,8 @@
-# Memória e sincronização SYCL: lendo informações de hardware
+# Memória e sincronização SYCL: lendo informações do hardware
 
 `size_t wgroup_size = 32;`
 
-Definimos o tamanho do grupo de trabalho que será usado. Isso é definido manualmente como 32, que funcionará em todos os dispositivos, mas é importante se você estiver otimizando para hardware específico entender como calcular o tamanho ideal do grupo de trabalho.
+Definimos o tamanho do grupo de trabalho que será usado. Isso é definido manualmente como 32, que funcionará em todos os dispositivos, mas é importante entender como calcular o tamanho ideal do grupo de trabalho se você estiver otimizando para um hardware específico.
 
 `auto part_size = wgroup_size * 2;`
 
