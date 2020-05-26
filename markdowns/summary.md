@@ -2,7 +2,7 @@
 
 Agora que você terminou este primeiro tutorial, teste seus conhecimentos para saber o que aprendeu até agora.
 
-?[Qual cabeçalho inlui o _runtime_ SYCL?]
+?[Qual cabeçalho inclui o _runtime_ SYCL?]
 -[ ] `CL\sycl.h`
 -[ ] `SYCL\cl.h`
 -[x] `CL\sycl.hpp`
@@ -14,7 +14,7 @@ Agora que você terminou este primeiro tutorial, teste seus conhecimentos para s
 -[ ] `device`
 -[ ] `command group`
 
-?[Para que é utilizado o `cl::sycl::buffer` no SYCL??]
+?[Para que é utilizado o `cl::sycl::buffer` no SYCL?]
 -[x] Para gerenciar a memória no _host_ e dispositivos SYCL
 -[ ] _Buffer_ de solicitações da web 
 -[ ] Para alocar memória
