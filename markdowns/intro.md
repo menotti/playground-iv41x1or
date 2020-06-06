@@ -1,4 +1,4 @@
-# Introdução ao SYCL
+# Introdução ao SYCL<sup id="a1">[1](#f1)</sup>
 
 ## O que é SYCL?
 
@@ -9,3 +9,5 @@ O SYCL é totalmente C++ padrão, portanto, não há extensões ou atributos de 
 Este tutorial tem como objetivo ensinar os fundamentos do SYCL por meio da explicação de uma aplicação simples.
 
 Usaremos o ComputeCpp, uma implementação compatível com SYCL v1.2.1 para compilar e executar os exemplos.
+
+<b id="f1">1</b> Este tutorial faz parte de um [Curso de Programação Paralela](https://github.com/menotti/pp) e traz apenas exemplos de uso. Acesse o material completo para mais detalhes. [↩](#a1)
